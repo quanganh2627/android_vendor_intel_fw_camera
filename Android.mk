@@ -13,7 +13,3 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/isp_acc_warp_deghost.bin:system/etc/firmware/isp_acc_warp_deghost.bin
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/isp_acc_fusion.bin:system/etc/firmware/isp_acc_fusion.bin
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/isp_acc_invert.bin:system/etc/firmware/isp_acc_invert.bin
-PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/isp_acc_vividness.bin:system/etc/firmware/isp_acc_vividness.bin
