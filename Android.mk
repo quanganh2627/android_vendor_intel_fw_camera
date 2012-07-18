@@ -1,16 +1,46 @@
-LOCAL_PATH := $(call my-dir)
-include $(CLEAR_VARS)
 
-$(info WARNING: PRODUCT_COPY_FILES disabled in $(LOCAL_PATH))
-#PRODUCT_COPY_FILES += \
-#	$(LOCAL_PATH)/shisp.bin:system/etc/firmware/shisp.bin
-#PRODUCT_COPY_FILES += \
-#	$(LOCAL_PATH)/dis_cam14mp.bin:system/etc/firmware/dis_cam14mp.bin
-#PRODUCT_COPY_FILES += \
-#	$(LOCAL_PATH)/fa_extension.bin:system/etc/firmware/fa_extension.bin
-#PRODUCT_COPY_FILES += \
-#	$(LOCAL_PATH)/isp_acc_multires.bin:system/etc/firmware/isp_acc_multires.bin
-#PRODUCT_COPY_FILES += \
-#	$(LOCAL_PATH)/isp_acc_warp_deghost.bin:system/etc/firmware/isp_acc_warp_deghost.bin
-#PRODUCT_COPY_FILES += \
-#	$(LOCAL_PATH)/isp_acc_fusion.bin:system/etc/firmware/isp_acc_fusion.bin
+LOCAL_PATH:= $(call my-dir)
+include $(CLEAR_VARS)
+LOCAL_MODULE := shisp.bin
+LOCAL_MODULE_OWNER := intel
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/firmware
+LOCAL_SRC_FILES := $(LOCAL_MODULE)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := fa_extension.bin
+LOCAL_MODULE_OWNER := intel
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/firmware
+LOCAL_SRC_FILES := $(LOCAL_MODULE)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := isp_acc_multires.bin
+LOCAL_MODULE_OWNER := intel
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/firmware
+LOCAL_SRC_FILES := $(LOCAL_MODULE)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := isp_acc_warp_deghost.bin
+LOCAL_MODULE_OWNER := intel
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/firmware
+LOCAL_SRC_FILES := $(LOCAL_MODULE)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := isp_acc_fusion.bin
+LOCAL_MODULE_OWNER := intel
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/firmware
+LOCAL_SRC_FILES := $(LOCAL_MODULE)
+include $(BUILD_PREBUILT)
