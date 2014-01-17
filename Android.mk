@@ -86,3 +86,12 @@ include $(BUILD_PHONY_PACKAGE)
 $(call camera-prebuilt-boilerplate, \
     $(hdr_v2_css21_2400b0_libs))
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := ap1302_fw.bin
+LOCAL_MODULE_OWNER := intel
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/firmware
+LOCAL_SRC_FILES := $(LOCAL_MODULE)
+include $(BUILD_PREBUILT)
+
