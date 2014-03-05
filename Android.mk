@@ -1,7 +1,7 @@
 LOCAL_PATH:= $(call my-dir)
 
 # ISP and FR
-camera_libs := shisp_2400b0_v21.bin shisp_2401a0_legacy_v21.bin shisp_2401a0_v21.bin
+camera_libs := shisp_2400b0_v21.bin shisp_2401a0_legacy_v21.bin shisp_2401a0_v21.bin shisp_2401a0_v21_bxtpoc.bin
 # HDR v2 FW CSS2.1 ISP2400B0
 hdr_v2_css21_2400b0_libs := isp_acc_multires_v2_css21_2400b0.bin isp_acc_warping_v2_css21_2400b0.bin isp_acc_deghosting_v2_css21_2400b0.bin \
 isp_acc_lumaproc_css21_2400b0.bin isp_acc_chromaproc_css21_2400b0.bin
