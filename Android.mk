@@ -29,6 +29,7 @@ $(call camera-prebuilt-boilerplate, \
 # build HDR v2 FW CSS2.1 ISP2400B0
 include $(CLEAR_VARS)
 LOCAL_MODULE := hdr_v2_fw_css21_2400b0
+LOCAL_MODULE_OWNER := intel
 LOCAL_MODULE_TAGS := optional
 LOCAL_REQUIRED_MODULES := $(hdr_v2_css21_2400b0_libs)
 include $(BUILD_PHONY_PACKAGE)
