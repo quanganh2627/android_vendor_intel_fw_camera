@@ -1,7 +1,12 @@
 LOCAL_PATH:= $(call my-dir)
 
 # ISP and FR
-camera_libs := shisp_2400b0_v21.bin shisp_2401a0_legacy_v21.bin shisp_2401a0_v21.bin shisp_2401a0_v21_bxtpoc.bin
+camera_libs := shisp_css15.bin shisp_2400b0_v21.bin shisp_2401a0_legacy_v21.bin shisp_2401a0_v21.bin shisp_2401a0_v21_bxtpoc.bin
+
+# HDR FW CSS1.5 ISP2300
+hdr_css15_2300_libs := isp_acc_multires_css15.bin isp_acc_warping_css15.bin isp_acc_deghosting_css15.bin \
+isp_acc_fusion_css15.bin isp_acc_postproc_css15.bin
+
 # HDR v2 FW CSS2.1 ISP2400B0
 hdr_v2_css21_2400b0_libs := isp_acc_multires_v2_css21_2400b0.bin isp_acc_warping_v2_css21_2400b0.bin isp_acc_deghosting_v2_css21_2400b0.bin \
 isp_acc_lumaproc_css21_2400b0.bin isp_acc_chromaproc_css21_2400b0.bin
@@ -31,6 +36,16 @@ endef
 # build ISP and FW
 $(call camera-prebuilt-boilerplate, \
     $(camera_libs))
+
+# CSS1.5 ISP2300
+include $(CLEAR_VARS)
+LOCAL_MODULE := hdr_fw_css15_2300
+LOCAL_MODULE_TAGS := optional
+LOCAL_REQUIRED_MODULES := $(hdr_css15_2300_libs)
+include $(BUILD_PHONY_PACKAGE)
+
+$(call camera-prebuilt-boilerplate, \
+    $(hdr_css15_2300_libs))
 
 # build HDR v2 FW CSS2.1 ISP2400B0
 include $(CLEAR_VARS)
