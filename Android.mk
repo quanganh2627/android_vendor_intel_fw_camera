@@ -14,9 +14,9 @@ isp_acc_lumaproc_css21_2400b0.bin isp_acc_chromaproc_css21_2400b0.bin
 hdr_v2_css21_2401_libs := isp_acc_multires_v2_css21_2401.bin isp_acc_warping_v2_css21_2401.bin isp_acc_deghosting_v2_css21_2401.bin \
 isp_acc_lumaproc_css21_2401.bin isp_acc_chromaproc_css21_2401.bin
 # ULL v1.5 FW CSS2.1 ISP2400B0
-ull_v15_css21_2400b0_libs := isp_acc_warping_v2_em_css21_2400b0.bin isp_acc_mfnr_em_css21_2400b0.bin
+ull_v15_css21_2400b0_libs := isp_acc_warping_v2_em_css21_2400b0.bin isp_acc_mfnr_em_css21_2400b0.bin isp_acc_sce_em_css21_2400b0.bin
 # ULL v1.5 FW CSS2.1 ISP2401
-ull_v15_css21_2401_libs := isp_acc_warping_v2_em_css21_2401.bin isp_acc_mfnr_em_css21_2401.bin
+ull_v15_css21_2401_libs := isp_acc_warping_v2_em_css21_2401.bin isp_acc_mfnr_em_css21_2401.bin isp_acc_sce_em_css21_2401.bin
 
 # function to copy firmware libraries to /etc/firmware
 define camera-prebuilt-boilerplate
